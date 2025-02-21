@@ -5,7 +5,8 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import helmet from "helmet";
 import dashboardRoutes from "./routes/dashboardRoutes";
-/* ROUTE IMPORTS */
+import productsRoutes from "./routes/productsRoutes";
+
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(morgan("common"));
 
 /* ROUTES */
 app.use("/dashboard", dashboardRoutes);
+app.use("/products", productsRoutes);
 
 /* SERVER */
 const port = process.env.PORT || 3001;
