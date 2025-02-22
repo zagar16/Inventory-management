@@ -28,8 +28,16 @@ app.use("/products", productsRoutes);
 app.use("/users", userRoutes);
 app.use("/expenses", expenseRoutes);
 
-/* SERVER */
+/* SERVER BEFORE AWS */
+/*
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+*/
+
+/* SERVER AFTER AWS */
+const port = Number(process.env.PORT) || 3001;
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server is running on port ${port}`);
 });
