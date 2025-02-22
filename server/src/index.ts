@@ -6,6 +6,9 @@ import bodyParser from "body-parser";
 import helmet from "helmet";
 import dashboardRoutes from "./routes/dashboardRoutes";
 import productsRoutes from "./routes/productsRoutes";
+import userRoutes from "./routes/userRoutes";
+import expenseRoutes from "./routes/expenseRoutes";
+
 
 
 /* CONFIGURATIONS */
@@ -22,6 +25,8 @@ app.use(morgan("common"));
 /* ROUTES */
 app.use("/dashboard", dashboardRoutes);
 app.use("/products", productsRoutes);
+app.use("/users", userRoutes);
+app.use("/expenses", expenseRoutes);
 
 /* SERVER */
 const port = process.env.PORT || 3001;
