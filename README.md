@@ -37,7 +37,7 @@ A full-stack inventory management system built with Next.js, Express, and Postgr
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/zagar16/Inventory-management.git
    ```
 
 2. **Backend Setup**
